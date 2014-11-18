@@ -20,8 +20,10 @@ import com.mongodb.DBObject;
 import com.mongodb.DefaultDBEncoder;
 import com.mongodb.LazyWriteableDBObject;
 
-public class JsonUtils {
+public final class JsonUtils {
 
+	private JsonUtils() {}
+	
 	private final static ObjectMapper mapper = new ObjectMapper(MongoBsonFactory.createFactory());
 
     static {
